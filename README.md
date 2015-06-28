@@ -103,6 +103,14 @@ end
 #=> 45
 ```
 
+If you'd prefer to compose classes directly, use `Beethoven::Composer`:
+
+```ruby
+Mul10Add5 = Beethoven::Composer.new(Lift, Multiply10, Add5)
+Mul10Add5.new(5).value
+#=> 55
+```
+
 ## Installation
 
 Add this line to your application's Gemfile:
