@@ -111,6 +111,8 @@ Mul10Add5.new(5).value
 #=> 55
 ```
 
+A more practical example is presented [here](https://gist.github.com/parsonsmatt/c1abbb830b6976566198)
+
 ## Installation
 
 Add this line to your application's Gemfile:
