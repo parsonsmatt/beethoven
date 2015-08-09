@@ -1,6 +1,10 @@
-example_id                        | status | run_time        |
---------------------------------- | ------ | --------------- |
-./spec/beethoven_spec.rb[1:1:1:1] | passed | 0.0004 seconds  |
-./spec/beethoven_spec.rb[1:1:1:2] | passed | 0.00008 seconds |
-./spec/beethoven_spec.rb[1:1:2:1] | passed | 0.00007 seconds |
-./spec/beethoven_spec.rb[1:1:2:2] | passed | 0.0001 seconds  |
+example_id                               | status | run_time        |
+---------------------------------------- | ------ | --------------- |
+./spec/beethoven/composer_spec.rb[1:1:1] | passed | 0.0001 seconds  |
+./spec/beethoven/composer_spec.rb[1:1:2] | passed | 0.00055 seconds |
+./spec/beethoven_spec.rb[1:1:1:1]        | passed | 0.00008 seconds |
+./spec/beethoven_spec.rb[1:1:1:2]        | passed | 0.00009 seconds |
+./spec/beethoven_spec.rb[1:1:2:1]        | passed | 0.00007 seconds |
+./spec/beethoven_spec.rb[1:1:2:2]        | passed | 0.0001 seconds  |
+./spec/beethoven_spec.rb[1:2:1]          | passed | 0.00039 seconds |
+./spec/beethoven_spec.rb[1:2:2]          | passed | 0.00014 seconds |

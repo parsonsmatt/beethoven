@@ -38,22 +38,35 @@ RSpec.describe Beethoven do
 
     describe 'with *' do
       it 'composes classes like math functions' do
-        expect( (F * G).new(5).b ).to eq( F.new(G.new(5)).b )
+        expect((F * G).new(5).b).to eq(F.new(G.new(5)).b)
       end
 
       it 'can be chained' do
-        expect( (F * H * G).new(5).b ).to eq( F.new(H.new(G.new(5))).b )
+        expect((F * H * G).new(5).b).to eq(F.new(H.new(G.new(5))).b)
       end
     end
 
     describe 'with |' do
       it 'composes classes like pipes' do
-        expect( (G | F).new(5).b ).to eq( F.new(G.new(5)).b )
+        expect((G | F).new(5).b).to eq(F.new(G.new(5)).b)
       end
 
       it 'can be chained' do
-        expect( (G | H | F).new(5).b ).to eq( F.new(H.new(G.new(5))).b )
+        expect((G | H | F).new(5).b).to eq(F.new(H.new(G.new(5))).b)
       end
+    end
+  end
+
+  describe 'proc composition' do
+    let(:f) { -> x { x + 1 } }
+    let(:g) { -> x { x * 2 } }
+
+    it 'allows lambdas to be composed' do
+      expect((f * g)[3]).to eq(7)
+    end
+
+    it 'supports pipeline' do
+      expect((f | g)[3]).to eq(8)
     end
   end
 end
