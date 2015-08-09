@@ -2,6 +2,8 @@ require 'spec_helper'
 require 'beethoven'
 
 RSpec.describe Beethoven do
+  using Beethoven
+
   describe 'class composition' do
     # F's initialize takes an object with interface a and returns an object with
     # interface b. Can be thought of as:
@@ -15,7 +17,7 @@ RSpec.describe Beethoven do
 
     # G's initialize takes an object and gives it the interface a. Can be
     # expressed like:
-    # G :: _ -> a
+    # G :: () -> a
     class G
       attr_reader :a
 
